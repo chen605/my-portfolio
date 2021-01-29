@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\..\\..\\PlayGround"
+	},
+	{
+		"path": "..\\..\\.."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "WebDevCamp"
+  }
+}
