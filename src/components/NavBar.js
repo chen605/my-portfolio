@@ -53,7 +53,7 @@ export default function NavBar() {
             style={{ style: 35, width: 35 }}
           />
           <SocialIcon
-            url="https://www.facebook.com/chen.chow.520"
+            url="https://www.udemy.com/user/chen-chow/"
             className="mr-4 "
             target="_blank"
             fgColor="#fff"
