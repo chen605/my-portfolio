@@ -52,13 +52,13 @@ export default function NavBar() {
             fgColor="#fff"
             style={{ style: 35, width: 35 }}
           />
-          {/* <SocialIcon
+          <SocialIcon
             url="https://www.udemy.com/user/chen-chow/"
             className="mr-4 "
             target="_blank"
             fgColor="#fff"
             style={{ style: 35, width: 35 }}
-          /> */}
+          />
         </div>
       </div>
     </header>
