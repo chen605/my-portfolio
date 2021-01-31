@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import SinglePost from "./components/SinglePost";
-import Post from "./components/Post";
+// import SinglePost from "./components/SinglePost";
+// import Post from "./components/Post";
 import Project from "./components/Project";
 import Navbar from "./components/NavBar";
 
