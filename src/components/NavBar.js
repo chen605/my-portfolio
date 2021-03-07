@@ -62,7 +62,7 @@ export default function NavBar({ fixed }) {
             style={{ style: 35, width: 35 }}
           />
           <SocialIcon
-            url="https://github.com/chen605/my-portfolio"
+            url="https://github.com/chen605"
             className="mr-4 "
             target="_blank"
             fgColor="#fff"
