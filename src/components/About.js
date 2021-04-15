@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import imageBg from "../react_image.jpg";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import { SocialIcon } from "react-social-icons";
+import "../styles/Home.css";
+import { useHistory } from "react-router";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -11,6 +13,7 @@ function urlFor(source) {
 
 export default function About() {
   const [author, setAuthor] = useState(null);
+  const history = useHistory();
 
   useEffect(() => {
     sanityClient
@@ -28,17 +31,11 @@ export default function About() {
   if (!author) return <div>Loading...</div>;
 
   return (
-    <main className="relative ">
-      <img src={imageBg} alt="react_bg" className="absolute w-full" />
-      <div className="p-10 lg:pt-48 container mx-auto relative ">
-        <section className="bg-indigo-800 rounded-lg shadow-2xl lg:flex p-20">
-          <img
-            src={urlFor(author.authorImage).url()}
-            className="rounded w-32 h-32 lg:w-64 lg-h-64 mr-8"
-            alt={author.name}
-          />
+    <main className="relative content">
+      <div className="container mx-auto relative ">
+        <section className="lg:flex">
           <div className="text-lg flex flex-col justify-center ">
-            <h1 className="cursive text-6xl text-green-300 mb-4">
+            <h1 className="cursive sm:text-6xl text-green-300 ">
               Hey there. I'm{" "}
               <span className="text-green-100">{author.name}</span>
             </h1>
@@ -47,6 +44,33 @@ export default function About() {
                 blocks={author.bio}
                 projectId="5mh5d4l6"
                 dataset="production"
+              />
+            </div>
+            <h3 className="text-white inline-flex justify-center">
+              Curious about my projects? Check it out!
+            </h3>
+            <div
+              className="box__button"
+              onClick={() => history.push("/project")}
+            >
+              <button className="text-white inline-flex justify-center button">
+                Projects
+              </button>
+            </div>
+            <div className="inline-flex justify-center my-5">
+              <SocialIcon
+                url="https://www.linkedin.com/in/chen-chow-59186a200/"
+                className="mr-4 "
+                target="_blank"
+                fgColor="#fff"
+                style={{ style: 35, width: 35 }}
+              />
+              <SocialIcon
+                url="https://github.com/chen605"
+                className="mr-4 "
+                target="_blank"
+                fgColor="#fff"
+                style={{ style: 35, width: 35 }}
               />
             </div>
           </div>
