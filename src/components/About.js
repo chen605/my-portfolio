@@ -34,6 +34,11 @@ export default function About() {
     <main className="relative content">
       <div className="container mx-auto relative ">
         <section className="lg:flex">
+          <img
+            src={urlFor(author.authorImage).url()}
+            className="rounded lg:w-64 lg-h-64 mr-20"
+            alt={author.name}
+          />
           <div className="text-lg flex flex-col justify-center ">
             <h1 className="cursive sm:text-6xl text-green-300 ">
               Hey there. I'm{" "}
