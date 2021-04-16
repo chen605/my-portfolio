@@ -36,13 +36,13 @@ export default function About() {
         <section className="lg:flex">
           <img
             src={urlFor(author.authorImage).url()}
-            className="rounded lg:w-64 lg-h-64 mr-20"
+            className="rounded lg:w-64 lg-h-64 mr-20 profile-pic"
             alt={author.name}
           />
           <div className="text-lg flex flex-col justify-center ">
-            <h1 className="cursive sm:text-6xl text-green-300 ">
-              Hey there. I'm{" "}
-              <span className="text-green-100">{author.name}</span>
+            <h1 className="cursive sm:text-6xl text-green-300 flex justify-center my-3">
+              Hey there{" "}
+              <span className="text-green-100"> {`. I'm ${author.name}`}.</span>
             </h1>
             <div className="prose lg:prose-xl text-white">
               <BlockContent

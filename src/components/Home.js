@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <div>
       <NavBar color="white" />
-      <main>
+      <main className="home">
         <img
           src={image}
           alt="Coding"
-          className="absolute object-cover w-full h-full"
+          className="absolute object-cover w-full h-full background"
         />
         <section className="about">
           <About />
