@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../stars.jpg";
+import image from "../Nightsky.jpg";
 import About from "./About";
 import NavBar from "./NavBar";
 import "../styles/Home.css";
